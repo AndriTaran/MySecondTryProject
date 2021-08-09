@@ -4,6 +4,7 @@ import {Image} from "./Image";
 import {SafeAreaView} from "./SaveAreaView";
 import {Text} from "./Text";
 import {DeleteButton} from "./SwapDeleteButton";
+import { ScrollView } from "./ScrollView";
 
 module.exports = {
     Block,
@@ -11,5 +12,6 @@ module.exports = {
     Image,
     SafeAreaView,
     Text,
-    DeleteButton
+    DeleteButton,
+    ScrollView
 }
