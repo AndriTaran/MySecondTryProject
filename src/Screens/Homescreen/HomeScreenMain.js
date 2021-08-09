@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { FlatList, LayoutAnimation, Platform, UIManager } from "react-native";
-import DraggableFlatList from "react-native-draggable-flatlist";
 import Animated from "react-native-reanimated";
 import SwipeableItem from "react-native-swipeable-item";
 import { Block, Text, DeleteButton, Button, SafeAreaView } from "../../common/simpleComponents/index";

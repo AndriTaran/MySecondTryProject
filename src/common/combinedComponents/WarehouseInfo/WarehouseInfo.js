@@ -18,18 +18,18 @@ const WarehouseInfo = ({number, label}) =>(
                justifyContent={'flex-start'}
                pl={'10px'}
                flexDirection={'row'}>
-            {/*<BoxIcon width={20}*/}
-            {/*         height={20}*/}
-            {/*         fill={'black'}/>*/}
+            <BoxIcon width={20}
+                     height={20}
+                     fill={'black'}/>
             <Text pl={'5px'} color={'black'}>{number}</Text>
         </Block>
         <Block width={'50%'}
                justifyContent={'flex-end'}
                pr={'10px'}
                flexDirection={'row'}>
-            {/*<LabelIcon width={"20px"}*/}
-            {/*           height={"20px"}*/}
-            {/*           fill={'black'}/>*/}
+            <LabelIcon width={"20px"}
+                       height={"20px"}
+                       fill={'black'}/>
             <Text pl={'5px'} color={'black'}>{label}</Text>
         </Block>
     </Block>
