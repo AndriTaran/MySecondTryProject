@@ -12,4 +12,11 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "CameraProject";
   }
+  @Override
+       protected List<ReactPackage> getPackages() {
+         return Arrays.<ReactPackage>asList(
+           new MainReactPackage(), // <---- add comma
+           new RNFSPackage() // <---------- add package
+         );
+       }
 }
