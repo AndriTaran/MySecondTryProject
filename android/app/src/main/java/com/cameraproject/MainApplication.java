@@ -10,11 +10,13 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.rnfs.RNFSPackage;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends androidx.multidex.MultiDexApplication implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
+
         @Override
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
@@ -54,6 +56,7 @@ public class MainApplication extends Application implements ReactApplication {
    * @param context
    * @param reactInstanceManager
    */
+
   private static void initializeFlipper(
       Context context, ReactInstanceManager reactInstanceManager) {
     if (BuildConfig.DEBUG) {
@@ -78,3 +81,4 @@ public class MainApplication extends Application implements ReactApplication {
     }
   }
 }
+
