@@ -3,20 +3,24 @@ import React, { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { RNCamera } from "react-native-camera";
 import PendingView from "./components/PendingView";
-import CameraRoll from "@react-native-community/cameraroll";
 import ImageBar from "./components/ImageBar";
 import { useDispatch } from "react-redux";
 import { fetchPhoto } from "../../redux/actions";
+import saveImage from "../../assets/function/saveImage";
+
 
 const CameraScreen = () => {
   const dispatch = useDispatch()
+
   useEffect(() => dispatch(fetchPhoto()),[])
+
   const takePicture = async (camera) => {
     const options = { quality: 0.5, base64: true };
-    const data = await camera.takePictureAsync(options)
+    await camera.takePictureAsync(options)
       .then(
         data => {
-          saveImage(data.uri)
+          console.log(data.uri)
+          saveImage(data.uri, false, dispatch)
         }
       )
       .catch(err => {
@@ -24,21 +28,12 @@ const CameraScreen = () => {
       });
   };
 
-  const saveImage = async filePath => {
-    try {
-      await CameraRoll.save(filePath)
-      dispatch(fetchPhoto())
-    } catch (error) {
-      console.log(error, 'saveImage err');
-    }
-  };
 
     return (
       <View style={styles.container}>
         <RNCamera
           style={styles.preview}
           type={RNCamera.Constants.Type.back}
-          flashMode={RNCamera.Constants.FlashMode.on}
           captureAudio={false}
           androidCameraPermissionOptions={{
             title: "Permission to use camera",
@@ -53,7 +48,7 @@ const CameraScreen = () => {
             buttonNegative: "Cancel",
           }}
         >
-          {({ camera, status, recordAudioPermissionStatus }) => {
+          {({ camera, status}) => {
             if (status !== "READY") return <PendingView />;
             return (
               <View style={{ flexDirection: "row", justifyContent: "center" }}>
