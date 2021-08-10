@@ -5,5 +5,6 @@ export function getPhoto() {
 }
 
 export function addPhoto(data) {
+  console.log('new',data.uri || data.image)
   return dispatch => dispatch({ type: ADD_PHOTO, payload: data });
 }

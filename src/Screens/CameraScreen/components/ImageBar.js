@@ -4,14 +4,13 @@ import { useSelector } from "react-redux";
 import PhotoItem from "./PhotoItem";
 import { FlatList } from "react-native";
 
-
 const ImageBar = () => {
 
   const photos = useSelector(state => state.photo.photos);
 
   const renderItem = ({ item, index }) => {
     return (
-      <PhotoItem source={item.node.image.uri} />
+      <PhotoItem source={item.uri || item.image} />
     );
   };
 
@@ -20,7 +19,7 @@ const ImageBar = () => {
       <FlatList horizontal={true}
                 data={photos}
                 renderItem={renderItem}
-                keyExtractor={item => item.node.timestamp} />
+                keyExtractor={item => item.uri} />
     </Block>
   );
 };
