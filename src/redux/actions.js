@@ -1,14 +1,9 @@
-import { ADD_PHOTO, FETCH_PHOTO, DELETE_PHOTO } from "./types";
-import CameraRoll from "@react-native-community/cameraroll";
+import { ADD_PHOTO, GET_PHOTO, DELETE_PHOTO } from "./types";
 
-export function fetchPhoto() {
-  return async dispatch => {
-    CameraRoll.getPhotos({
-      first: 1000,
-      assetType: "Photos",
-    })
-      .then(r => {
-        dispatch({ type: FETCH_PHOTO, payload: r.edges });
-      });
-  };
+export function getPhoto() {
+  return dispatch => dispatch({ type: GET_PHOTO });
+}
+
+export function addPhoto(data) {
+  return dispatch => dispatch({ type: ADD_PHOTO, payload: data });
 }

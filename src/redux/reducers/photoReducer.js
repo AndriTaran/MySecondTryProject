@@ -1,4 +1,4 @@
-import { ADD_PHOTO, DELETE_PHOTO, FETCH_PHOTO } from "../types";
+import { ADD_PHOTO, DELETE_PHOTO, GET_PHOTO } from "../types";
 
 
 const initialState = {
@@ -7,10 +7,10 @@ const initialState = {
 
 export const photoReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_PHOTO:
-      return {...state, photos: state.photos = action.payload}
+    case GET_PHOTO:
+      return {...state, photos: state.photos}
     case ADD_PHOTO:
-      return {...state, photos: state.photos.concat(action.payload)}
+      return {...state, photos: [action.payload].concat(state.photos)}
     case DELETE_PHOTO:
       return {...state, photos: state.photos.filter((photo, index) => index !== action.payload)}
     default:
