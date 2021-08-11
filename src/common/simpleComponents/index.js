@@ -5,6 +5,7 @@ import {SafeAreaView} from "./SaveAreaView";
 import {Text} from "./Text";
 import {DeleteButton} from "./SwapDeleteButton";
 import { ScrollView } from "./ScrollView";
+import {CalloutComponent} from "./Callout";
 
 module.exports = {
     Block,
@@ -13,5 +14,6 @@ module.exports = {
     SafeAreaView,
     Text,
     DeleteButton,
-    ScrollView
+    ScrollView,
+    CalloutComponent
 }
