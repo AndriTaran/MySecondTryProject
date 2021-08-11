@@ -7,9 +7,9 @@ import { rootReducer } from "./src/redux/reducers/rootReducer";
 import thunk from "redux-thunk";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import Test from "./src/assets/testswipe";
 import CameraScreen from "./src/Screens/CameraScreen/CameraScreen.js";
 import HomeScreenMain from "./src/Screens/Homescreen/HomeScreenMain";
+import MapsScreen from "./src/Screens/MapScreen/MapsScreen";
 
 const Drawer = createDrawerNavigator();
 const store = createStore(rootReducer, compose(applyMiddleware(
@@ -27,7 +27,7 @@ export default function App() {
           }}>
             <Drawer.Screen name="Home" component={HomeScreenMain} />
             <Drawer.Screen name="Camera" component={CameraScreen} />
-            <Drawer.Screen name="TEST" component={Test} />
+            <Drawer.Screen name="Maps" component={MapsScreen} />
           </Drawer.Navigator>
         </NavigationContainer>
       </PersistGate>
