@@ -6,6 +6,8 @@ import {Text} from "./Text";
 import {DeleteButton} from "./SwapDeleteButton";
 import { ScrollView } from "./ScrollView";
 import {CalloutComponent} from "./Callout";
+import {TextInput} from './TextInput';
+import {KeyboardAvoidingView} from "./KeyboardAvoidingView";
 
 module.exports = {
     Block,
@@ -15,5 +17,7 @@ module.exports = {
     Text,
     DeleteButton,
     ScrollView,
-    CalloutComponent
+    CalloutComponent,
+    TextInput,
+    KeyboardAvoidingView
 }

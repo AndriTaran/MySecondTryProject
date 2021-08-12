@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
-import {borderStyles, dimensionStyles, marginStyles, paddingStyles} from "./Mixins";
+import { borderStyles, dimensionStyles, marginStyles, paddingStyles } from "./Mixins";
 
-export const Block = styled.View`
+export const TextInput = styled.TextInput`
   ${dimensionStyles}
   ${marginStyles}
   ${paddingStyles}
@@ -11,8 +11,5 @@ export const Block = styled.View`
   ${({bc}) => bc && `background-color: ${bc}`}
   ${({justifyContent}) => justifyContent && `justify-content: ${justifyContent}`}
   align-items: ${props => props.alignItm || 'center'};
-  ${({position}) => position && `position: ${position}`}
-  ${({top}) => top && `top: ${top}`}
-  ${({left}) => left && `left: ${left}`}
-  ${({right}) => right && `right: ${right}`}
+  ${({fontSize}) => fontSize && `font-size: ${fontSize}`};
 `;

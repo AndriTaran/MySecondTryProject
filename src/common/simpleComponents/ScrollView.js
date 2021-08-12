@@ -7,4 +7,5 @@ export const ScrollView = styled.ScrollView`
   ${marginStyles}
   ${({flex}) => flex && `flex: ${Number(flex)}`}
   ${({flexDirection}) => flexDirection && `flex-direction: ${flexDirection}`}
+  ${({justifyContent}) => justifyContent && `justify-content: ${justifyContent}`}
 `;
