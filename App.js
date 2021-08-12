@@ -10,6 +10,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import CameraScreen from "./src/Screens/CameraScreen/CameraScreen.js";
 import HomeScreenMain from "./src/Screens/Homescreen/HomeScreenMain";
 import MapsScreen from "./src/Screens/MapScreen/MapsScreen";
+import AuthorizationScreen from "./src/Screens/AuthorizationScreen/AuthorizationScreen";
 
 const Drawer = createDrawerNavigator();
 const store = createStore(rootReducer, compose(applyMiddleware(
@@ -22,12 +23,13 @@ export default function App() {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
-          <Drawer.Navigator initialRouteName="Home" screenOptions={{
+          <Drawer.Navigator initialRouteName="LOGIN" screenOptions={{
             headerShown: false,
           }}>
             <Drawer.Screen name="Home" component={HomeScreenMain} />
             <Drawer.Screen name="Camera" component={CameraScreen} />
             <Drawer.Screen name="Maps" component={MapsScreen} />
+            <Drawer.Screen name="LOGIN" component={AuthorizationScreen} />
           </Drawer.Navigator>
         </NavigationContainer>
       </PersistGate>
