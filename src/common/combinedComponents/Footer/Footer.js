@@ -4,19 +4,17 @@ import React from "react";
 import {Text} from "../../simpleComponents/Text";
 
 
-const Footer = ({text}) => {
+const Footer = ({text, err}) => {
     return (
         <Block justifyContent={'center'}
                flexDirection={'row'}
                width={'100%'}
-               borderTopWidth={'1px'}
                pt={'20px'}
-               pb={'15px'}
-               borderTopCollor={'grey'}>
+               pb={'40px'}>
             <Block justifyContent={'center'}
                    pt={'15px'}
                    pb={'15px'}
-                   bc={'#E5E5E5'}
+                   bc={err?"#B51B44":null}
                    borderBottomCollor={'#618296'}
                    borderTopCollor={'#618296'}
                    borderLeftCollor={'#618296'}
@@ -28,7 +26,7 @@ const Footer = ({text}) => {
                    width={'85%'}
                    borderRadius={'5px'}>
                 <Button>
-                    <Text fontSize={'18px'} color={'#315B75'}>{text}</Text>
+                    <Text fontSize={'18px'} color={err?"white":'#315B75'}>{text}</Text>
                 </Button>
             </Block>
         </Block>
