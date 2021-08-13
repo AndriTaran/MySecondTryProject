@@ -7,6 +7,7 @@ export const Block = styled.View`
   ${paddingStyles}
   ${borderStyles}
   ${({flex}) => flex && `flex: ${Number(flex)}`}
+  ${({border}) => border && `border: ${border}`}
   ${({flexDirection}) => flexDirection && `flex-direction: ${flexDirection}`}
   ${({bc}) => bc && `background-color: ${bc}`}
   ${({justifyContent}) => justifyContent && `justify-content: ${justifyContent}`}
