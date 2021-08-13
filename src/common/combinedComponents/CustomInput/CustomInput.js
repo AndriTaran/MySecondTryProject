@@ -7,7 +7,8 @@ const CustomInput = (props) => {
     form: { errors, touched, setFieldTouched },
     ...inputProps
   } = props;
-
+  console.log(errors)
+console.log(touched, 'touch')
   const hasError = errors[name] && touched[name];
 
   return (
@@ -20,10 +21,10 @@ const CustomInput = (props) => {
           onBlur(name);
         }}
         {...inputProps}
-        borderBottomColor={errors[name] ? "red" : "grey"}
-        borderTopColor={errors[name] ? "red" : "white"}
-        borderRightColor={errors[name] ? "red" : "white"}
-        borderLeftColor={errors[name] ? "red" : "white"}
+        borderBottomColor={hasError ? "red" : "grey"}
+        borderTopColor={hasError ? "red" : "white"}
+        borderRightColor={hasError ? "red" : "white"}
+        borderLeftColor={hasError ? "red" : "white"}
         borderTopWidth={"1px"}
         borderRightWidth={"1px"}
         borderLeftWidth={"1px"}
