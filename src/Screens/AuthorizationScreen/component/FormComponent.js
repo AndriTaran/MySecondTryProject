@@ -4,6 +4,7 @@ import { Field, Formik } from "formik";
 import CustomInput from "../../../common/combinedComponents/CustomInput/CustomInput";
 import validator from "../../../assets/validation/validator";
 import React, { useRef } from "react";
+import FingerprintButton from "../../../common/combinedComponents/FingerPrintButton/FingerPrintButton";
 
 const FormComponent = () => {
    const scrollViewRef = useRef();
@@ -81,6 +82,7 @@ const FormComponent = () => {
                      >Forgot password?
                      </Text>
                   </Button>
+                  <FingerprintButton/>
                   <Text
                      mt={"10px"}
                      color={"grey"}
