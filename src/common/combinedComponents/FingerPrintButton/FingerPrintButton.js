@@ -49,7 +49,6 @@ const FingerprintButton = () => {
          height={'30px'}
          justifyContent={'center'}
          onPress={handleFingerprintShowed}
-         disabled={!!errorMessage}
       >
          <Text
             fontSize={'20px'}
