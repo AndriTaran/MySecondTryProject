@@ -7,8 +7,6 @@ const CustomInput = (props) => {
     form: { errors, touched, setFieldTouched },
     ...inputProps
   } = props;
-  console.log(errors)
-console.log(touched, 'touch')
   const hasError = errors[name] && touched[name];
 
   return (
