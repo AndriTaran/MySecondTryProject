@@ -1,5 +1,8 @@
 PODS:
   - boost-for-react-native (1.63.0)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.64.2)
@@ -366,6 +369,10 @@ PODS:
     - React-perflogger (= 0.64.2)
   - RNCAsyncStorage (1.15.5):
     - React-Core
+  - RNCharts (0.5.7):
+    - Charts (= 3.3.0)
+    - React
+    - SwiftyJSON (= 5.0)
   - RNFS (2.18.0):
     - React
   - RNGestureHandler (1.10.3):
@@ -408,6 +415,7 @@ PODS:
     - React-RCTImage
   - RNSVG (12.1.1):
     - React
+  - SwiftyJSON (5.0.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -470,6 +478,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - RNCharts (from `../node_modules/react-native-charts-wrapper`)
   - RNFS (from `../node_modules/react-native-fs`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNPhotoEditorSDK (from `../node_modules/react-native-photoeditorsdk`)
@@ -481,6 +490,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - Charts
     - CocoaAsyncSocket
     - Flipper
     - Flipper-DoubleConversion
@@ -495,6 +505,7 @@ SPEC REPOS:
     - libevent
     - OpenSSL-Universal
     - PhotoEditorSDK
+    - SwiftyJSON
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -570,6 +581,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNCharts:
+    :path: "../node_modules/react-native-charts-wrapper"
   RNFS:
     :path: "../node_modules/react-native-fs"
   RNGestureHandler:
@@ -587,6 +600,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
@@ -637,15 +651,17 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: a9904c6d0218fb9f8b19d6dd88607225927668f9
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   RNCAsyncStorage: 56a3355a10b5d660c48c6e37325ac85ebfd09885
+  RNCharts: d364ca2085e24edb9ee0390d3fb7209257daa44c
   RNFS: 3ab21fa6c56d65566d1fb26c2228e2b6132e5e32
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNPhotoEditorSDK: f74f0567dc86592434f90371e0dadd841b88bf12
   RNReanimated: 9c13c86454bfd54dab7505c1a054470bfecd2563
   RNScreens: 21b73c94c9117e1110a79ee0ee80c93ccefed8ce
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ad176ed22da91d7fb8cfe641414cd7699a6ac852
+PODFILE CHECKSUM: 7f3dc562ef1fe08992f7441e2b9225dc45d11f78
 
 COCOAPODS: 1.10.2

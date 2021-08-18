@@ -13,6 +13,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1BF309AD995E49829939A890 /* libPods-CameraProject-CameraProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072B06EBC18C0AD17F77946E /* libPods-CameraProject-CameraProjectTests.a */; };
 		8B16C15426CBEFA30022A396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B16C15326CBEFA30022A396 /* LaunchScreen.storyboard */; };
+		8B186AEF26CD16E2006BA8C5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B186AEE26CD16E2006BA8C5 /* File.swift */; };
+		8B186AF126CD16EF006BA8C5 /* q.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B186AF026CD16EE006BA8C5 /* q.m */; };
 		9E6075D1F8E0FF6F7F9BFA71 /* libPods-CameraProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5025612E61159022DE78D32 /* libPods-CameraProject.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,9 @@
 		35E7CCF38E508F9E972E5489 /* Pods-CameraProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraProject.debug.xcconfig"; path = "Target Support Files/Pods-CameraProject/Pods-CameraProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5E2A9909087F8F9017F5F508 /* Pods-CameraProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraProject.release.xcconfig"; path = "Target Support Files/Pods-CameraProject/Pods-CameraProject.release.xcconfig"; sourceTree = "<group>"; };
 		8B16C15326CBEFA30022A396 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B186AEB26CD0663006BA8C5 /* CameraProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B186AEE26CD16E2006BA8C5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		8B186AF026CD16EE006BA8C5 /* q.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = q.m; sourceTree = "<group>"; };
 		8E7591CAF507E3E22CF22BCA /* Pods-CameraProject-CameraProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraProject-CameraProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-CameraProject-CameraProjectTests/Pods-CameraProject-CameraProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5025612E61159022DE78D32 /* libPods-CameraProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CameraProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -116,12 +121,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8B186AEE26CD16E2006BA8C5 /* File.swift */,
+				8B186AF026CD16EE006BA8C5 /* q.m */,
 				13B07FAE1A68108700A75B9A /* CameraProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CameraProjectTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8B0BAF2E60C7F08EFF630756 /* Pods */,
+				8B186AEB26CD0663006BA8C5 /* CameraProject-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -207,7 +215,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -411,7 +419,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				8B186AEF26CD16E2006BA8C5 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				8B186AF126CD16EF006BA8C5 /* q.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E7591CAF507E3E22CF22BCA /* Pods-CameraProject-CameraProjectTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -457,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0989ED6517927D58717A22F5 /* Pods-CameraProject-CameraProjectTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = CameraProjectTests/Info.plist;
@@ -497,6 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CameraProject;
+				SWIFT_OBJC_BRIDGING_HEADER = "CameraProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -522,6 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CameraProject;
+				SWIFT_OBJC_BRIDGING_HEADER = "CameraProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -583,7 +597,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -641,7 +654,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
