@@ -1,9 +1,10 @@
 import Schemas from "../../../assets/validation/validationSchema";
 import { Block, Text, ScrollView, Button } from "../../../common/simpleComponents";
 import { Field, Formik } from "formik";
+import React, { useRef } from "react";
+import I18n from '../../../assets/locales/i18n'
 import CustomInput from "../../../common/combinedComponents/CustomInput/CustomInput";
 import validator from "../../../assets/validation/validator";
-import React, { useRef } from "react";
 import FingerprintButton from "../../../common/combinedComponents/FingerPrintButton/FingerPrintButton";
 
 const FormComponent = () => {
@@ -38,7 +39,7 @@ const FormComponent = () => {
                      textAlign={"left"}
                      width={"100%"}
                      fontSize={"15px"}
-                  >USERNAME
+                  >{I18n.t('username')}
                   </Text>
                   <Field
                      component={CustomInput}
@@ -50,7 +51,7 @@ const FormComponent = () => {
                      width={"100%"}
                      mt={"20px"}
                      fontSize={"15px"}
-                  >PASSWORD
+                  >{I18n.t('password')}
                   </Text>
                   <Field
                      component={CustomInput}
@@ -67,7 +68,7 @@ const FormComponent = () => {
                      <Text
                         fontSize={"20px"}
                         color={"white"}
-                     >LOGIN
+                     >{I18n.t('login')}
                      </Text>
                   </Button>
                   <Button
@@ -79,7 +80,7 @@ const FormComponent = () => {
                      <Text
                         fontSize={"20px"}
                         color={"blue"}
-                     >Forgot password?
+                     >{I18n.t('forgotPass')}
                      </Text>
                   </Button>
                   <FingerprintButton/>

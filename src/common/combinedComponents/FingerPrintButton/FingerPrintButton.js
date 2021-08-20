@@ -3,6 +3,8 @@ import FingerprintScanner from 'react-native-fingerprint-scanner';
 import {AppState} from 'react-native';
 import {Button, Text} from '../../simpleComponents';
 import FingerprintPopup from '../FingerprintPopup/FingerprintPopup.component';
+import I18n from "../../../assets/locales/i18n";
+
 
 const FingerprintButton = () => {
   const appState = useRef(AppState.currentState);
@@ -53,7 +55,7 @@ const FingerprintButton = () => {
          <Text
             fontSize={'20px'}
             color={'blue'}
-         >Login with biometric
+         >{I18n.t('logWithBiometric')}
          </Text>
          {
             popupShowed && (
