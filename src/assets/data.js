@@ -60,3 +60,14 @@ export const initialState = {
    isRecording: false,
 };
 
+export const coordinate = {
+   latitude: 47.842677,
+   longitude: 35.132220,
+};
+
+export const initialRegion = {
+   latitude: 47.842677,
+   longitude: 35.132220,
+   latitudeDelta: 0.05,
+   longitudeDelta: 0.05,
+}

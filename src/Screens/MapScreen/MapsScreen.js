@@ -1,36 +1,24 @@
 import React from "react";
-import MapView, { Marker } from "react-native-maps";
-import { Text } from "react-native";
-import CustomMarker from "./components/CustomMarker";
-import { CalloutComponent } from "../../common/simpleComponents/";
+import { Marker } from "react-native-maps";
+import { CalloutComponent, Text } from "../../common/simpleComponents/";
+import { coordinate, initialRegion } from "../../assets/data";
+import { GoogleMapView } from "../../common/combinedComponents/MapView/MapView";
+import MarkerIcon from "../../assets/icons/pin-maps-and-location-svgrepo-com.svg";
 
-const coordinate = {
-  latitude: 47.842677,
-  longitude: 35.132220,
-};
+const MapsScreen = () => (
 
-const MapsScreen = () => {
-  return (
-    <MapView
-      style={{ flex: 1 }}
-      initialRegion={{
-        latitude: 47.842677,
-        longitude: 35.132220,
-        latitudeDelta: 0.05,
-        longitudeDelta: 0.05,
-      }}
-      mapPadding={{left: 20, right:10}}
+    <GoogleMapView
+      flex={1}
+      initialRegion={initialRegion}
+      mapPadding={{ left: 20, right: 10 }}
     >
-      <Marker coordinate={coordinate}
-              pinColor={"#764ABC"}
-      >
-        <CustomMarker />
-        <CalloutComponent width={'100px'}>
+      <Marker coordinate={coordinate}>
+        <MarkerIcon height={40} width={40} fill={'#764ABC'}/>
+        <CalloutComponent width={"100px"}>
           <Text>You are here 😄</Text>
         </CalloutComponent>
       </Marker>
-    </MapView>
+    </GoogleMapView>
   );
-};
 
 export default MapsScreen;
