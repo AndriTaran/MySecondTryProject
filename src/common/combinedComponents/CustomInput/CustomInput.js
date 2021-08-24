@@ -8,16 +8,17 @@ const CustomInput = (props) => {
     ...inputProps
   } = props;
   const hasError = errors[name] && touched[name];
+  const onBlurs = () => {
+    setFieldTouched(name);
+    onBlur(name);
+  }
 
   return (
     <>
       <TextInput
         value={value}
         onChangeText={(text) => onChange(name)(text)}
-        onBlur={() => {
-          setFieldTouched(name);
-          onBlur(name);
-        }}
+        onBlur={onBlurs}
         {...inputProps}
         borderBottomColor={hasError ? "red" : "grey"}
         borderTopColor={hasError ? "red" : "white"}
