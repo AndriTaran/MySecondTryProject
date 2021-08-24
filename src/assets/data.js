@@ -29,8 +29,16 @@ export const DATA = [
 
 export const CHART_DATA = {
    dataSets: [{
-      values: [{ y: 100 }, { y: 105 }, { y: 102 }, { y: 110 }, { y: 114 }, { y: 109 }, { y: 105 }, { y: 99 }, { y: 95 }],
-
+      values: [
+         { y: 100 },
+         { y: 105 },
+         { y: 102 },
+         { y: 110 },
+         { y: 114 },
+         { y: 109 },
+         { y: 105 },
+         { y: 99 },
+         { y: 95 }],
       config: {
          color: processColor("#ff955f"),
          barShadowColor: processColor("lightgrey"),
@@ -40,3 +48,15 @@ export const CHART_DATA = {
       label: "Bar dataSet",
    }],
 };
+
+export const initialState = {
+   flash: 'off',
+   zoom: 0,
+   autoFocus: 'on',
+   focusDepth: 0,
+   type: 'back',
+   whiteBalance: 'auto',
+   ratio: '16:9',
+   isRecording: false,
+};
+

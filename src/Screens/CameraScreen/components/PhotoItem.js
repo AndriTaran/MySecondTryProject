@@ -1,10 +1,8 @@
 import React from "react";
-import { Image } from "../../../common/simpleComponents/Image";
 import { PESDK } from "react-native-photoeditorsdk";
-import { TouchableOpacity } from "react-native";
-import { addPhoto, getPhoto } from "../../../redux/actions";
 import { useDispatch } from "react-redux";
-
+import { addPhoto, getPhoto } from "../../../redux/actions";
+import { Button, Image } from "../../../common/simpleComponents/";
 
 const PhotoItem = ({ source }) => {
 
@@ -19,14 +17,14 @@ const PhotoItem = ({ source }) => {
   };
 
   return (
-    <TouchableOpacity onPress={openEditor}>
+    <Button onPress={openEditor}>
       <Image
         source={{ uri: source }}
         height={"100px"}
         width={"100px"}
         ml={"5px"}
       />
-    </TouchableOpacity>
+    </Button>
   );
 };
 
