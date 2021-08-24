@@ -10,9 +10,8 @@ import FingerprintButton from "../../../common/combinedComponents/FingerPrintBut
 const FormComponent = () => {
 
   const scrollViewRef = useRef();
-  const onSubmit = (values) => (
-    console.log(values)
-  );
+
+  const onSubmit = (values) => console.log(values);
 
   return (
     <Formik
