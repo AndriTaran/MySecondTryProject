@@ -1,24 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { FlatList, LayoutAnimation, Platform, UIManager } from "react-native";
-import DraggableFlatList from "react-native-draggable-flatlist";
-import Animated from "react-native-reanimated";
 import SwipeableItem from "react-native-swipeable-item";
-import { Block, Text, DeleteButton, Button, SafeAreaView } from "../../common/simpleComponents/index";
+import { View, Text, DeleteButton, Button, SafeAreaView } from "../../common/simpleComponents/index";
 import { DATA } from "../../assets/data";
 import { Item, Footer, Header, ButtonGroup, WarehouseInfo, ListTitle } from "../../common/combinedComponents/index";
 
-const { multiply, sub } = Animated;
 if (Platform.OS === "android") {
   UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-
 const HomeScreenMain = () => {
 
   const [data, setData] = useState(DATA);
-  const scrollView = useRef(null);
-  const [outerScrollEnabled, setOuterScrollEnabled] = useState(true);
 
   const deleteData = (item) => {
     const updateData = data.filter((i) => i !== item);
@@ -26,16 +20,19 @@ const HomeScreenMain = () => {
     setData(updateData);
   };
 
-  const renderUnderlayLeft = ({ item, percentOpen }) => (
-    <DeleteButton>
-      <Button onPressOut={() => deleteData(item)}>
-        <Text color={"white"} pr={"25px"}>{`DELETE`}</Text>
-      </Button>
-    </DeleteButton>
-  );
+  const renderUnderlayLeft = ({ item }) => {
+    const handleDelete = () => deleteData(item);
+    return (
+      <DeleteButton>
+        <Button onPressOut={handleDelete}>
+          <Text color={"white"} pr={"25px"}>{`DELETE`}</Text>
+        </Button>
+      </DeleteButton>
+    );
+  };
 
   const itemRef = new Map();
-  const renderItem = ({ item, index, drag }) => (
+  const renderItem = ({ item, drag }) => (
     <SwipeableItem
       key={item.name}
       item={item}
@@ -61,22 +58,22 @@ const HomeScreenMain = () => {
 
   return (
     <SafeAreaView>
-      <Block flexDirection={"column"} flex={1}>
+      <View flexDirection={"column"} flex={1}>
         <Header />
         <ButtonGroup text={"Articles In Carton"} />
         <WarehouseInfo number={246542123579} label={9} />
         <ListTitle leftText={"ARTICLE"} rightText={"ACT"} />
-        <Block flexDirection={"row"}>
-            <FlatList data={data}
-                               renderItem={renderItem}
-                               keyExtractor={(item, index) => `draggable-item-${item.name}`}
-                                />
-        </Block>
-      </Block>
+        <View flexDirection={"row"}>
+          <FlatList
+            data={data}
+            renderItem={renderItem}
+            keyExtractor={(item) => `draggable-item-${item.name}`}
+          />
+        </View>
+      </View>
       <Footer text={"Pull the trigger to start reading"} />
     </SafeAreaView>
   );
 };
 
 export default HomeScreenMain;
-
