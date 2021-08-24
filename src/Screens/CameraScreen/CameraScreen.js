@@ -1,12 +1,11 @@
 "use strict";
 import React, { useEffect } from "react";
-import { RNCamera } from "react-native-camera";
 import { useDispatch } from "react-redux";
 import { useCamera } from "react-native-camera-hooks";
 import { addPhoto, getPhoto } from "../../redux/actions";
 import { initialState } from "../../assets/data";
 import ImageBar from "./components/ImageBar";
-import { Block, Button, Text } from "../../common/simpleComponents/";
+import { View, Button, Text } from "../../common/simpleComponents/";
 import { CameraView } from "../../common/combinedComponents/";
 
 const CameraScreen = () => {
@@ -45,7 +44,7 @@ const CameraScreen = () => {
   };
 
   return (
-    <Block
+    <View
       flex={1}
       width={"100%"}
       flexDirection={"column"}
@@ -64,11 +63,6 @@ const CameraScreen = () => {
         whiteBalance={whiteBalance}
         ratio={ratio}
         focusDepth={focusDepth}
-        faceDetectionLandmarks={
-          RNCamera.Constants.FaceDetection.Landmarks
-            ? RNCamera.Constants.FaceDetection.Landmarks.all
-            : null
-        }
       >
         <>
           <Button
@@ -85,7 +79,7 @@ const CameraScreen = () => {
         </>
       </CameraView>
       <ImageBar />
-    </Block>
+    </View>
   );
 
 };
