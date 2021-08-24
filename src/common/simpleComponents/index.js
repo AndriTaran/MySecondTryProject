@@ -1,4 +1,4 @@
-import {Block} from './Block';
+import {View} from './View';
 import {Button} from "./Button";
 import {Image} from "./Image";
 import {SafeAreaView} from "./SaveAreaView";
@@ -10,7 +10,7 @@ import {TextInput} from './TextInput';
 import {KeyboardAvoidingView} from "./KeyboardAvoidingView";
 
 module.exports = {
-    Block,
+    View,
     Button,
     Image,
     SafeAreaView,

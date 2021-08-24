@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import {borderStyles, dimensionStyles, marginStyles, paddingStyles} from "./Mixins";
 
-export const Block = styled.View`
+export const View = styled.View`
   ${dimensionStyles}
   ${marginStyles}
   ${paddingStyles}
