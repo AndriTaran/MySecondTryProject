@@ -1,4 +1,4 @@
-import { Block } from "../../simpleComponents/Block";
+import { View } from "../../simpleComponents/View";
 import { Button } from "../../simpleComponents/Button";
 import React from "react";
 import { Text } from "../../simpleComponents/Text";
@@ -6,14 +6,14 @@ import { Text } from "../../simpleComponents/Text";
 
 const Footer = ({ text, err }) => {
   return (
-    <Block
+    <View
       justifyContent={"center"}
       flexDirection={"row"}
       width={"100%"}
       pt={"20px"}
       pb={"40px"}
     >
-      <Block
+      <View
         justifyContent={"center"}
         pt={"15px"}
         pb={"15px"}
@@ -25,8 +25,8 @@ const Footer = ({ text, err }) => {
         <Button>
           <Text fontSize={"18px"} color={err ? "white" : "#315B75"}>{text}</Text>
         </Button>
-      </Block>
-    </Block>
+      </View>
+    </View>
   );
 };
 
