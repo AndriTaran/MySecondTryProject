@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import RNFS from "react-native-fs";
 import { View, Image, Button, Text, SafeAreaView } from "../../common/simpleComponents/";
-import { Signature } from "../../common/combinedComponents/Signature/Signature";
+import { Signature } from "../../common/combinedComponents";
 
 const SignatureScreen = () => {
   const ref = useRef();
