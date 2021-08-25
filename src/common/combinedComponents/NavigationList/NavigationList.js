@@ -7,7 +7,7 @@ import {
   ChartScreen, MapsScreen,
   CameraScreen, AuthorizationScreen,
   BarcodeScreen, WebViewScreen,
-  NotificationScreen,
+  NotificationScreen, SignatureScreen2,
 } from "../../../Screens/";
 
 
@@ -56,13 +56,14 @@ const NavigationList = () => {
     >
       <Drawer.Screen name="Home" component={HomeScreenMain} />
       <Drawer.Screen name="Camera" component={CameraScreen} />
-      <Drawer.Screen name="Maps" component={MapsScreen}  />
+      <Drawer.Screen name="Maps" component={MapsScreen} />
       <Drawer.Screen name="LOGIN" component={AuthorizationScreen} />
       <Drawer.Screen name="BarcodeScreen" component={BarcodeScreen} />
       <Drawer.Screen name="WebViewScreen" component={WebViewScreen} />
       <Drawer.Screen name="Chart" component={ChartScreen} />
       <Drawer.Screen name="Notification" component={NotificationScreen} />
       <Drawer.Screen name="Signature" component={SignatureScreen} />
+      <Drawer.Screen name="Signature2" component={SignatureScreen2} />
     </Drawer.Navigator>
   );
 };

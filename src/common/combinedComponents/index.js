@@ -6,6 +6,7 @@ import WarehouseInfo from "./WarehouseInfo/WarehouseInfo";
 import ButtonGroup from "./ButtonGroup/ButtonGroup";
 import {CameraView} from "./CameraView/CameraView";
 import { Signature } from "./Signature/Signature";
+import { Signature2 } from "./Signature/Signature2";
 
 module.exports={
     Footer,
@@ -15,5 +16,6 @@ module.exports={
     WarehouseInfo,
     ButtonGroup,
     CameraView,
-    Signature
+    Signature,
+    Signature2
 }

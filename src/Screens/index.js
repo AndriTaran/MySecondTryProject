@@ -7,6 +7,7 @@ import BarcodeScreen from "./BarcodeScreen/BarcodeScreen";
 import WebViewScreen from "./WebViewScreen/WebViewScreen";
 import ChartScreen from "./ChartScreen/ChartScreen";
 import NotificationScreen from "./NotificationScreen/NotificationScreen";
+import SignatureScreen2 from "./SignatureScreen/SignatureScreen2";
 
 module.exports = {
   SignatureScreen,
@@ -18,4 +19,5 @@ module.exports = {
   WebViewScreen,
   ChartScreen,
   NotificationScreen,
+  SignatureScreen2,
 }
