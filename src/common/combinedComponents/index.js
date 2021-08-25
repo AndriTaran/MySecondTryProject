@@ -5,6 +5,7 @@ import ListTitle from "./ListTitle/ListTitle";
 import WarehouseInfo from "./WarehouseInfo/WarehouseInfo";
 import ButtonGroup from "./ButtonGroup/ButtonGroup";
 import {CameraView} from "./CameraView/CameraView";
+import { Signature } from "./Signature/Signature";
 
 module.exports={
     Footer,
@@ -13,5 +14,6 @@ module.exports={
     ListTitle,
     WarehouseInfo,
     ButtonGroup,
-    CameraView
+    CameraView,
+    Signature
 }
