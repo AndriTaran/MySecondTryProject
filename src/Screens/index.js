@@ -8,6 +8,7 @@ import WebViewScreen from "./WebViewScreen/WebViewScreen";
 import ChartScreen from "./ChartScreen/ChartScreen";
 import NotificationScreen from "./NotificationScreen/NotificationScreen";
 import SignatureScreen2 from "./SignatureScreen/SignatureScreen2";
+import DateTimePickerScreen from "./DateTimePickerScreen/DateTimePickerScreen";
 
 module.exports = {
   SignatureScreen,
@@ -20,4 +21,5 @@ module.exports = {
   ChartScreen,
   NotificationScreen,
   SignatureScreen2,
+  DateTimePickerScreen,
 }

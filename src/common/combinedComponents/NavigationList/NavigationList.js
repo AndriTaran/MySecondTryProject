@@ -8,8 +8,8 @@ import {
   CameraScreen, AuthorizationScreen,
   BarcodeScreen, WebViewScreen,
   NotificationScreen, SignatureScreen2,
+  DateTimePickerScreen,
 } from "../../../Screens/";
-
 
 const Drawer = createDrawerNavigator();
 
@@ -64,6 +64,7 @@ const NavigationList = () => {
       <Drawer.Screen name="Notification" component={NotificationScreen} />
       <Drawer.Screen name="Signature" component={SignatureScreen} />
       <Drawer.Screen name="Signature2" component={SignatureScreen2} />
+      <Drawer.Screen name={"Date and Time Picker"} component={DateTimePickerScreen} />
     </Drawer.Navigator>
   );
 };
