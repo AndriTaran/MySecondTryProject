@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import PushNotification, { Importance } from "react-native-push-notification";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeScreenMain from "../../../Screens/Homescreen/HomeScreenMain";
-import CameraScreen from "../../../Screens/CameraScreen/CameraScreen";
-import MapsScreen from "../../../Screens/MapScreen/MapsScreen";
-import AuthorizationScreen from "../../../Screens/AuthorizationScreen/AuthorizationScreen";
-import BarcodeScreen from "../../../Screens/BarcodeScreen/BarcodeScreen";
-import WebViewScreen from "../../../Screens/WebViewScreen/WebViewScreen";
-import ChartScreen from "../../../Screens/ChartScreen/ChartScreen";
-import NotificationScreen from "../../../Screens/NotificationScreen/NotificationScreen";
+import {
+  HomeScreenMain, SignatureScreen,
+  ChartScreen, MapsScreen,
+  CameraScreen, AuthorizationScreen,
+  BarcodeScreen, WebViewScreen,
+  NotificationScreen, SignatureScreen2,
+  DateTimePickerScreen,
+} from "../../../Screens/";
 
 const Drawer = createDrawerNavigator();
 
@@ -62,6 +62,9 @@ const NavigationList = () => {
       <Drawer.Screen name="WebViewScreen" component={WebViewScreen} />
       <Drawer.Screen name="Chart" component={ChartScreen} />
       <Drawer.Screen name="Notification" component={NotificationScreen} />
+      <Drawer.Screen name="Signature" component={SignatureScreen} />
+      <Drawer.Screen name="Signature2" component={SignatureScreen2} />
+      <Drawer.Screen name={"Date and Time Picker"} component={DateTimePickerScreen} />
     </Drawer.Navigator>
   );
 };
